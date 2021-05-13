@@ -1,0 +1,23 @@
+@import '../styles/custom-media.css';
+
+.container {
+  display: flex;
+}
+
+.reverseContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  display: flex;
+  flex: 1;
+}
