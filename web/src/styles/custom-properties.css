@@ -1,9 +1,6 @@
 :root {
-  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-family-headings: arial;
-  --font-family-subheadings: cursive;
 
-  --color-black: #202123;
+  --color-black: #434343;
   --color-dark-gray: #32373e;
   --color-gray: #697a90;
   --color-light-gray: #b4bcc7;
@@ -30,4 +27,5 @@
   --font-title2-line-height: calc(33 / 24); /* 33px */
   --font-title1-size: calc(49 / var(--unit) * 1rem); /* 49px */
   --font-title1-line-height: calc(57 / 49); /* 57px */
+  --font-header1-fluid: calc(24px + 25px * ((100vw - 320px) / 680));
 }

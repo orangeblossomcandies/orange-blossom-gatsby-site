@@ -4,9 +4,10 @@
   display: flex;
 }
 
-.reverseContainer {
-  display: flex;
-  flex-direction: row-reverse;
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 .content {
@@ -17,7 +18,16 @@
   align-items: center;
 }
 
+.content h1, h2 {
+  margin: 10px;
+}
+
 .image {
   display: flex;
   flex: 1;
+}
+
+.textContainer {
+  width: 50%;
+  text-align: center;
 }

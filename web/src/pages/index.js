@@ -94,7 +94,12 @@ const IndexPage = (props) => {
         description={site.description}
         keywords={site.keywords}
       />
-      <Panel color={'#B5E8D5'} heading={'Handmade Candy & Cream'} subheading={'Crafted with love and care'} panelText={'Panel text goes here'} />
+      <Panel
+        color="#B5E8D5"
+        heading="Handmade Candy & Cream"
+        subheading="Crafted with love and care"
+        panelText="Something about the heading, yada yada, come visit the shop to yada yada while you yada. Something about the company, this is just placeholder text to show what this textbox is going to look like."
+      />
     </Layout>
   );
 };
