@@ -9,7 +9,7 @@ const mainSection = () => {
         <div className={styles.scrollText}>SCROLL</div>
         <div className={styles.logoWrapper}>
           <StaticImage
-            src="../images/squareLogo.png"
+            src="../assets/squareLogo.png"
             alt="Orange Blossom Logo"
             caption="Orange Blossom Logo"
             placeholder="blurred"

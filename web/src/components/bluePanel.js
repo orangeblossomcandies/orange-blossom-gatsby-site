@@ -29,7 +29,7 @@ const bluePanel = ({
       </div>
       <div className={styles.content}>
         <h1>{heading}</h1>
-        <StaticImage src="../images/line.png" alt="black line" width={300} />
+        <StaticImage src="../assets/line.png" alt="black line" width={300} />
         <h2>{subheading}</h2>
         <div className={styles.textContainer}>
           <p>{panelText}</p>
