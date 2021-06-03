@@ -1,14 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
-import {
-  filterOutDocsPublishedInTheFuture,
-  filterOutDocsWithoutSlugs,
-  mapEdgesToNodes,
-} from "../lib/helpers";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Seo from "../components/seo";
 import Layout from "../containers/layout";
-import Panel from "../components/panel";
+import BluePanel from "../components/bluePanel";
+import MainSection from "../components/mainSection";
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -39,26 +35,18 @@ export const query = graphql`
       description
       keywords
     }
-    posts: allSanityPost(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
-      edges {
-        node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
+    home: sanityHome {
+      heading
+      subheading
+      panelImage {
+        asset {
+          _id
         }
+        caption
+        alt
+        ...SanityImage
       }
+      body
     }
   }
 `;
@@ -69,17 +57,13 @@ const IndexPage = (props) => {
   if (errors) {
     return (
       <Layout>
-        <GraphQLErrorList errors={errors} />
+        <GraphQLErrorList errors={errors} />G
       </Layout>
     );
   }
 
   const site = (data || {}).site;
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts)
-        .filter(filterOutDocsWithoutSlugs)
-        .filter(filterOutDocsPublishedInTheFuture)
-    : [];
+  const home = (data || {}).home;
 
   if (!site) {
     throw new Error(
@@ -94,11 +78,14 @@ const IndexPage = (props) => {
         description={site.description}
         keywords={site.keywords}
       />
-      <Panel
-        color="#B5E8D5"
-        heading="Handmade Candy & Cream"
-        subheading="Crafted with love and care"
-        panelText="Something about the heading, yada yada, come visit the shop to yada yada while you yada. Something about the company, this is just placeholder text to show what this textbox is going to look like."
+      <MainSection />
+      <BluePanel
+        imageSrc={home.panelImage}
+        imageAlt={home.panelImage.alt}
+        imageCaption={home.panelImage.caption}
+        heading={home.heading}
+        subheading={home.subheading}
+        panelText={home.body}
       />
     </Layout>
   );

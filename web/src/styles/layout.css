@@ -27,18 +27,7 @@ h1 {
   text-transform: uppercase;
   font-size: 24px;
   line-height: var(--font-title1-line-height);
-}
-
-@media screen and (min-width: 320px) {
-  h1 {
-    font-size: calc(24px + 25px * ((100vw - 320px) / 680));
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  h1 {
-    font-size: 49px;
-  }
+  text-align: center;
 }
 
 h2 {
@@ -47,4 +36,20 @@ h2 {
   font-style: normal;
   font-size: var(--font-title1-size);
   line-height: var(--font-title2-line-height);
+}
+
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: var(--font-fluid-heading);
+  }
+
+  h2 {
+    font-size: var(--font-fluid-subheading);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  h1, h2 {
+    font-size: 49px;
+  }
 }
