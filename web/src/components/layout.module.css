@@ -2,32 +2,28 @@
 @import '../styles/custom-properties.css';
 
 .footer {
-  height: 1000px;
-  @nest & a {
-    color: inherit;
-    text-decoration: none;
-
-    @media (hover: hover) {
-      @nest &:hover {
-        color: var(--color-accent);
-      }
-    }
-  }
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  background-color: var(--color-orange);
+  color: var(--color-font-light);
+  text-transform: uppercase;
 }
 
-.footerWrapper {
-  box-sizing: border-box;
-  max-width: 960px;
-  padding: 4.5em 1.5em 1.5em;
-  margin: 0 auto;
-
-  @media (--media-min-small) {
-    padding: 6em 2em 2em;
-  }
+.footer div {
+  flex: 1;
+  margin: 30px;
 }
 
-.siteInfo {
-  text-align: center;
-  font-size: var(--font-small-size);
-  line-height: var(--font-small-line-height);
+span {
+  display: block;
+  line-height: 1.5rem;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.logo {
+  margin: 30px;
 }

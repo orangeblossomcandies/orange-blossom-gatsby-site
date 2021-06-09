@@ -23,8 +23,22 @@
   margin-right: 100px;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 1630px) {
+  .hours {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .topBarWrapper {
+    justify-content: center;
+  }
+
   .hours, .flavorOfWeek {
     display: none;
+  }
+
+  .address {
+    margin: 0;
   }
 }

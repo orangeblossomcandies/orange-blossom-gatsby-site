@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 1000px;
+  background-color: var(--color-blue);
+}
+
+.content {
+  margin: 0 100px 0 100px;
+}
+
+.contentHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentHeading h1, h2 {
+  margin: 10px;
+}
+
+.carouselWrapper {
+  margin-top: 50px;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 100px 0 100px;
+}
+
+@media (max-width: 414px) {
+  .carouselWrapper {
+    padding: 0 10px 0 10px;
+  }
+}

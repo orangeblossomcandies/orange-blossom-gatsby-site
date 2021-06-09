@@ -6,6 +6,9 @@ import Layout from "../containers/layout";
 import BluePanel from "../components/bluePanel";
 import MainSection from "../components/mainSection";
 import AboutPanel from "../components/aboutPanel";
+import YellowPanel from "../components/yellowPanel";
+import TestimonialSection from "../components/testimonialSection";
+import GalleryCarousel from "../components/galleryCarousel";
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -48,6 +51,17 @@ export const query = graphql`
         ...SanityImage
       }
       body
+      yellowHeading
+      yellowSubheading
+      yellowImage {
+        asset {
+          _id
+        }
+        caption
+        alt
+        ...SanityImage
+      }
+      yellowBody
     }
   }
 `;
@@ -89,6 +103,16 @@ const IndexPage = (props) => {
         panelText={home.body}
       />
       <AboutPanel />
+      <YellowPanel
+        imageSrc={home.yellowImage}
+        imageAlt={home.yellowImage.alt}
+        imageCaption={home.yellowImage.caption}
+        heading={home.yellowHeading}
+        subheading={home.yellowSubheading}
+        panelText={home.yellowBody}
+      />
+      <TestimonialSection />
+      <GalleryCarousel />
     </Layout>
   );
 };

@@ -39,8 +39,33 @@
 .contactWrapper {
   display: flex;
   margin-right: 100px;
+  align-items: center;
+}
+
+.icon {
+  margin-left: 20px;
 }
 
 .contactWrapper div:first-of-type {
   margin-right: 50px;
+}
+
+.mobileIcon {
+  display: none;
+  margin: -20px 20px 0 0;
+}
+
+@media (max-width: 900px) {
+  .linksWrapper, .contactWrapper {
+    display: none;
+  }
+
+  .mobileIcon {
+    display: inline;
+  }
+
+  .navContainer {
+    justify-content: flex-end;
+    background: none;
+  }
 }

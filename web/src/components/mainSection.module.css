@@ -2,13 +2,16 @@
 
 .mainSectionWrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  min-height: 950px;
   height: calc(100vh - 130px);
 }
 
 .logoWrapper {
-  padding: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0 20px 0;
 }
 
 .textOverlay {
@@ -21,9 +24,28 @@
   font-size: 1.5rem;
 }
 
+@media (max-width: 1000px) {
+  .textOverlay {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .mainSectionWrapper {
+    min-height: 438px;
+    height: calc(100vh -130px);
+  }
+
+  .logoWrapper {
+    margin-top: -100px;
+  }
+}
+
 @media (max-width: 414px) {
   .logoWrapper {
-    padding: 20px;
+    padding: 0 20px 0 20px;
   }
 
   .textOverlay {
