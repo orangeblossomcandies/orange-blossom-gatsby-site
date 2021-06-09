@@ -3,6 +3,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV || "development"}`,
 });
 
+const { setDayWithOptions } = require("date-fns/fp");
 const clientConfig = require("./client-config");
 
 const isProd = process.env.NODE_ENV === "production";

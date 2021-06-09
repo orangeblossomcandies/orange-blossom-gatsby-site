@@ -9,6 +9,9 @@
   --color-accent: #156dff;
   --color-yellow: #F9DB79;
   --color-blue: #B5E8D5;
+  --color-orange: #db7342;
+  --color-font-light: #e5d9d9;
+  --color-font-dark: #434343;
 
   /* Typography */
   --unit: 16;
@@ -29,4 +32,6 @@
   --font-title1-line-height: calc(57 / 49); /* 57px */
   --font-fluid-heading: calc(20px + 25 * ((100vw - 320px) / 1180));
   --font-fluid-subheading: calc(28px + 25 * ((100vw - 320px) / 1180));
+  --font-fluid-large-heading: calc(30px + 100 * ((100vw - 320px) / 1180));
+  --font-fluid-large-subheading: calc(40px + 50 * ((100vw - 320px) / 1180));
 }

@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #b5e8d5;
+  background-color: var(--color-blue);
 }
 
 .image {
@@ -28,18 +28,18 @@ h2 {
 }
 
 .link {
-  border: 2px solid #434343;
+  border: 2px solid var(--color-black);
   border-radius: 30px;
   padding: 10px 20px 10px 20px;
   margin-top: 20px;
-  color: #434343;
+  color: var(--color-font-dark);
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .link:hover {
-  background-color: #434343;
-  color: #b5e8d5;
+  background-color: var(--color-black);
+  color: var(--color-blue);
   transition: 1s;
 }
 

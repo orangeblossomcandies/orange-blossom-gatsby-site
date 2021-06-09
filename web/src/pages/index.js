@@ -5,6 +5,7 @@ import Seo from "../components/seo";
 import Layout from "../containers/layout";
 import BluePanel from "../components/bluePanel";
 import MainSection from "../components/mainSection";
+import AboutPanel from "../components/aboutPanel";
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -87,6 +88,7 @@ const IndexPage = (props) => {
         subheading={home.subheading}
         panelText={home.body}
       />
+      <AboutPanel />
     </Layout>
   );
 };

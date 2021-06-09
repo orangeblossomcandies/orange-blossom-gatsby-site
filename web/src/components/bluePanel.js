@@ -34,7 +34,9 @@ const bluePanel = ({
         <div className={styles.textContainer}>
           <p>{panelText}</p>
         </div>
-        <Link className={styles.link} to="/about/">View Menu</Link>
+        <Link className={styles.link} to="/menu/">
+          View Menu
+        </Link>
       </div>
     </div>
   );

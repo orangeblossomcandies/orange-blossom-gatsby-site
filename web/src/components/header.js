@@ -1,34 +1,21 @@
-import { Link } from "gatsby";
 import React from "react";
-import Icon from "./icon";
-import { cn } from "../lib/helpers";
-
 import * as styles from "./header.module.css";
 
-const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
-  <div className={styles.root}>
-    <div className={styles.wrapper}>
-      <div className={styles.branding}>
-        <Link to="/">{siteTitle}</Link>
+const Header = () => {
+  return (
+    <div className={styles.topBarWrapper}>
+      <div className={styles.address}>
+        16937 Lakeside Dr. Montverde, FL 34756
       </div>
-
-      <button
-        className={styles.toggleNavButton}
-        onClick={showNav ? onHideNav : onShowNav}
-      >
-        <Icon symbol="hamburger" />
-      </button>
-
-      <nav className={cn(styles.nav, showNav && styles.showNav)}>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-            <Link to="/about/">About</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className={styles.hours}>
+        Hours of operation: Monday-wednesday 12-8pm | Thursday 12-6pm |
+        Friday-saturday closed | Sunday 12-6pm
+      </div>
+      <div className={styles.flavorOfWeek}>
+        Flavor of the week: Key Lime Pie
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Header;
