@@ -7,8 +7,13 @@ import BluePanel from "../components/bluePanel";
 import MainSection from "../components/mainSection";
 import AboutPanel from "../components/aboutPanel";
 import YellowPanel from "../components/yellowPanel";
-import TestimonialSection from "../components/testimonialSection";
-import GalleryCarousel from "../components/galleryCarousel";
+import loadable from "@loadable/component";
+
+const TestimonialSection = loadable(() =>
+  import("../components/testimonialSection")
+);
+
+const GalleryCarousel = loadable(() => import("../components/galleryCarousel"));
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
