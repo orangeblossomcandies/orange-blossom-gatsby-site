@@ -1,6 +1,6 @@
 # orange-blossom-gatsby-site
 
-_Landing page built with Gatsby and Sanity._
+_Landing page site built with Gatsby and Sanity._
 
 Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-blog).
 
