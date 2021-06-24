@@ -1,6 +1,6 @@
 # orange-blossom-gatsby-site
 
-_Fully customizable blog template with a React.js front-end._
+_Landing page built with Gatsby and Sanity._
 
 Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-blog).
 
