@@ -3,15 +3,13 @@
 .mainSectionWrapper {
   display: flex;
   align-items: center;
-  min-height: 950px;
-  height: calc(100vh - 130px);
+  justify-content: center;
+  height: calc(100vh - 80px);
 }
 
 .logoWrapper {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 20px 0 20px 0;
+  margin: 0 20px;
 }
 
 .textOverlay {
@@ -35,7 +33,7 @@
 @media (max-width: 800px) {
   .mainSectionWrapper {
     min-height: 438px;
-    height: calc(100vh -130px);
+    height: calc(100vh -80px);
   }
 
   .logoWrapper {

@@ -17,13 +17,13 @@ const galleryCarousel = () => {
             },
           },
         ]}
-        itemWidth={400}
+        itemWidth={300}
       >
-        <StaticImage src="../assets/cups.png" width={400} />
-        <StaticImage src="../assets/oranges.png" width={400} />
-        <StaticImage src="../assets/chocolates.png" width={400} />
-        <StaticImage src="../assets/candies.png" width={400} height={400} />
-        <StaticImage src="../assets/popcorn.png" width={400} />
+        <StaticImage src="../assets/cups.png" width={300} />
+        <StaticImage src="../assets/oranges.png" width={300} />
+        <StaticImage src="../assets/chocolates.png" width={300} />
+        <StaticImage src="../assets/candies.png" width={300} height={300} />
+        <StaticImage src="../assets/popcorn.png" width={300} />
       </Carousel>
     </section>
   );

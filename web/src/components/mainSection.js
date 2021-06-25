@@ -7,10 +7,11 @@ const mainSection = () => {
     <div className={styles.mainSectionWrapper}>
       <div className={styles.logoWrapper}>
         <StaticImage
-          src="../assets/squareLogo.png"
+          src="../assets/hero.png"
           alt="Orange Blossom Logo"
           caption="Orange Blossom Logo"
           placeholder="blurred"
+          width="600"
         />
       </div>
       <div className={styles.textOverlay}>

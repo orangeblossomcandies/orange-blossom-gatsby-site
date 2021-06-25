@@ -9,7 +9,11 @@ const testimonialSection = () => {
       <div className={styles.content}>
         <div className={styles.contentHeading}>
           <h1>Testimonials & Reviews</h1>
-          <StaticImage src="../assets/line.png" alt="black line" width={300} />
+          <StaticImage
+            src="../assets/line-black.png"
+            alt="black line"
+            width={300}
+          />
           <h2>What your neighbors say</h2>
         </div>
         <div className={styles.carouselWrapper}>

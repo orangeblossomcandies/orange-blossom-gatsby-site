@@ -17,6 +17,7 @@ const reviewCarousel = () => {
     <Carousel
       plugins={[
         "infinite",
+        "centered",
         {
           resolve: slidesToShowPlugin,
           options: {
@@ -26,59 +27,32 @@ const reviewCarousel = () => {
         {
           resolve: arrowsPlugin,
           options: {
-            arrowLeft: <FontAwesomeIcon icon={faAngleLeft} size="5x" />,
-            arrowRight: <FontAwesomeIcon icon={faAngleRight} size="5x" />,
+            arrowLeft: (
+              <FontAwesomeIcon
+                icon={faAngleLeft}
+                size="5x"
+                className={styles.arrow}
+              />
+            ),
+            arrowRight: (
+              <FontAwesomeIcon
+                icon={faAngleRight}
+                size="5x"
+                className={styles.arrow}
+              />
+            ),
             addArrowClickHandler: true,
           },
         },
       ]}
+      itemWidth={400}
       breakpoints={{
-        1200: {
+        1100: {
           plugins: [
-            "infinite",
             {
               resolve: slidesToShowPlugin,
               options: {
-                numberOfSlides: 1,
-              },
-            },
-            {
-              resolve: arrowsPlugin,
-              options: {
-                arrowLeft: (
-                  <FontAwesomeIcon
-                    icon={faAngleLeft}
-                    size="5x"
-                    className={styles.icon}
-                  />
-                ),
-                arrowRight: (
-                  <FontAwesomeIcon
-                    icon={faAngleRight}
-                    size="5x"
-                    className={styles.icon}
-                  />
-                ),
-                addArrowClickHandler: true,
-              },
-            },
-          ],
-        },
-        1800: {
-          plugins: [
-            "infinite",
-            {
-              resolve: slidesToShowPlugin,
-              options: {
-                numberOfSlides: 2,
-              },
-            },
-            {
-              resolve: arrowsPlugin,
-              options: {
-                arrowLeft: <FontAwesomeIcon icon={faAngleLeft} size="5x" />,
-                arrowRight: <FontAwesomeIcon icon={faAngleRight} size="5x" />,
-                addArrowClickHandler: true,
+                numberOfSlides: 3,
               },
             },
           ],

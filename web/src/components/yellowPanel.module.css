@@ -27,22 +27,6 @@ h2 {
   text-align: center;
 }
 
-.link {
-  border: 2px solid var(--color-black);
-  border-radius: 30px;
-  padding: 10px 20px 10px 20px;
-  margin-top: 20px;
-  color: var(--color-font-dark);
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.link:hover {
-  background-color: var(--color-black);
-  color: var(--color-yellow);
-  transition: 1s;
-}
-
 @media (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr;

@@ -49,6 +49,10 @@ h2 {
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
   }
+
+  .content {
+    padding: 50px 20px;
+  }
 }
 
 @media (max-width: 768px) {
