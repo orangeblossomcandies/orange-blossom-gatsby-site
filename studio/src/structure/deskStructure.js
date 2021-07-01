@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { FcHome, FcEditImage, FcSettings } from "react-icons/fc";
+import { FcHome, FcEditImage, FcSettings, FcAbout } from "react-icons/fc";
 import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
@@ -52,6 +52,15 @@ export default () =>
             .documentId("singletonHomepage")
         ),
       S.listItem()
+        .title("About")
+        .icon(FcAbout)
+        .child(
+          S.editor()
+            .id("about")
+            .schemaType("about")
+            .documentId("singletonAbout")
+        ),
+      S.listItem()
         .title("Menu")
         .icon(FcEditImage)
         .child(
@@ -62,6 +71,6 @@ export default () =>
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["siteSettings", "home", "menu"].includes(listItem.getId())
+          !["siteSettings", "home", "menu", "about"].includes(listItem.getId())
       ),
     ]);

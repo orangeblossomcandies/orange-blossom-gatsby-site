@@ -8,6 +8,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import siteSettings from "./documents/siteSettings";
 import singletonHomepage from "./documents/singletonHomepage";
 import singletonMenu from "./documents/singletonMenu";
+import singletonAbout from "./documents/singletonAbout";
 
 // Object types
 import bodyPortableText from "./objects/bodyPortableText";
@@ -27,6 +28,7 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+    singletonAbout,
     singletonMenu,
     singletonHomepage,
     siteSettings,

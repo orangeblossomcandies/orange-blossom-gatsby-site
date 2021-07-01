@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../containers/layout";
+import PortableText from "../components/portableText";
 
 export const query = graphql`
   query AboutPageQuery {
@@ -9,15 +10,20 @@ export const query = graphql`
       description
       keywords
     }
+    about: sanityAbout {
+      title
+      _rawBio
+    }
   }
 `;
 
-export default function About() {
+export default function About({ data }) {
+  const about = (data || {}).about;
   return (
     <Layout>
       <div style={{ color: `teal` }}>
-        <h1>About Gatsby</h1>
-        <p>Such wow. Very React.</p>
+        <h1>{about.title}</h1>
+        {about._rawBio && <PortableText blocks={about._rawBio} />}
       </div>
     </Layout>
   );
