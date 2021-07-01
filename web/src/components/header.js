@@ -12,7 +12,7 @@ const Header = () => {
         Friday-saturday closed | Sunday 12-6pm
       </div>
       <div className={styles.flavorOfWeek}>
-        Flavor of the week: Key Lime Pie
+        Flavor of the month: Birthday Cake
       </div>
     </div>
   );
