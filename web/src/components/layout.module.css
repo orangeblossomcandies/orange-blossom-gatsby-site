@@ -41,7 +41,7 @@ span {
 .instaIcon {
   margin: 20px 10px 0 0;
   background: var(--color-font-light);
-  padding: 10px 12px;
+  padding: 10px 13px;
   border-radius: 50%;
   transition: 0.4s;
 }
@@ -53,7 +53,7 @@ span {
 .facebookIcon {
   margin: 20px 10px 0 0;
   background: var(--color-font-light);
-  padding: 10px 16px;
+  padding: 10px 15px;
   border-radius: 50%;
   transition: 0.4s;
 }

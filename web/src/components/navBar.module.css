@@ -12,7 +12,7 @@
 }
 
 .linksWrapper {
-  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .linksWrapper ul {
@@ -23,13 +23,14 @@
 .linksWrapper ul li {
   display: inline-block;
   list-style: none;
-  margin-right: 50px;
+  margin-left: 50px;
   text-transform: uppercase;
 }
 
 .link {
   text-decoration: none;
   color: var(--color-font-dark);
+  font-weight: 500;
 }
 
 .link:hover {
@@ -38,8 +39,14 @@
 
 .contactWrapper {
   display: flex;
-  margin-right: 100px;
+  margin-left: 100px;
   align-items: center;
+}
+
+.contactWrapper a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .icon {
@@ -50,9 +57,14 @@
   margin-right: 50px;
 }
 
-.mobileIcon {
+.mobileIconWrapper {
   display: none;
-  margin: -20px 20px 0 0;
+  margin: 10px 10px 0 0;
+}
+
+.mobileIcon {
+  height: 50px;
+  width: 50px;
 }
 
 @media (max-width: 900px) {
@@ -60,7 +72,7 @@
     display: none;
   }
 
-  .mobileIcon {
+  .mobileIconWrapper {
     display: inline;
   }
 

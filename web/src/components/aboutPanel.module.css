@@ -3,12 +3,13 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 800px;
+  height: 1000px;
   background-image: url("../assets/meettheownersbg.png");
-  background-attachment: fixed;
-  background-position:top;
+  background-attachment: absolute;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  overflow: hidden;
 }
 
 .content {
@@ -45,6 +46,30 @@
   transition: 1s;
 }
 
+@media (max-width: 1200px) {
+  .wrapper {
+    height: 700px;
+  }
+}
+
+@media (max-width: 845px) {
+  .wrapper {
+    height: 500px;
+  }
+}
+
+@media (max-width: 680px) {
+  .wrapper {
+    height: 400px;
+  }
+}
+
+@media (max-width: 510px) {
+  .wrapper {
+    height: 300px;
+  }
+}
+
 @media (max-width: 414px) {
   .content h1 {
     margin-bottom: 5px;
@@ -52,5 +77,11 @@
 
   .content h2 {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 330px) {
+  .wrapper {
+    height: 275px;
   }
 }

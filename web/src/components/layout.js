@@ -11,19 +11,10 @@ const Layout = ({ children }) => (
   <>
     <Header />
     <NavBar />
-    <div>{children}</div>
+    <main>{children}</main>
     <footer className={styles.footer}>
       <div className={styles.logoContainer}>
         <StaticImage src="../assets/roundlogo.png" width={200} height={200} />
-      </div>
-
-      <div className={styles.container}>
-        <h3>About</h3>
-        <p>
-          Orange Blossom Candies & Cream is a mother and daughter owned ice
-          cream parlor and candy shop located in Montverde just beside Montverde
-          Academy.
-        </p>
       </div>
       <div className={styles.container}>
         <h3>Address</h3>
@@ -44,7 +35,7 @@ const Layout = ({ children }) => (
                 icon={faFacebookF}
                 color="#db7342"
                 className={styles.facebookIcon}
-                size="2x"
+                size="lg"
               />
             </a>
             <a href="https://instagram.com">
@@ -52,7 +43,7 @@ const Layout = ({ children }) => (
                 icon={faInstagram}
                 className={styles.instaIcon}
                 color="#db7342"
-                size="2x"
+                size="lg"
               />
             </a>
           </span>

@@ -1,9 +1,5 @@
-@media (max-width: 414px) {
-  .icon {
-    height: 20px;
-  }
-}
-
-.arrow {
-  padding: 10px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

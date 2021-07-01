@@ -7,12 +7,16 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // document schemas
 import siteSettings from "./documents/siteSettings";
 import singletonHomepage from "./documents/singletonHomepage";
+import singletonMenu from "./documents/singletonMenu";
 
 // Object types
 import bodyPortableText from "./objects/bodyPortableText";
 import bioPortableText from "./objects/bioPortableText";
 import excerptPortableText from "./objects/excerptPortableText";
 import mainImage from "./objects/mainImage";
+import iceCreamSize from "./objects/iceCreamSize";
+import specialtyFlavor from "./objects/specialtyFlavor";
+import drink from "./objects/drink";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,12 +27,16 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+    singletonMenu,
     singletonHomepage,
     siteSettings,
     mainImage,
     bodyPortableText,
     bioPortableText,
     excerptPortableText,
+    iceCreamSize,
+    specialtyFlavor,
+    drink,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

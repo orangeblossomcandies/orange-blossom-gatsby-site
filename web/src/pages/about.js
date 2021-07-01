@@ -1,5 +1,16 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../containers/layout";
+
+export const query = graphql`
+  query AboutPageQuery {
+    settings: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+      title
+      description
+      keywords
+    }
+  }
+`;
 
 export default function About() {
   return (

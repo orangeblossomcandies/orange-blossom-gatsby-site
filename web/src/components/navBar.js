@@ -1,13 +1,14 @@
 import React from "react";
 import * as styles from "./navBar.module.css";
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { MdMenu } from "react-icons/md";
 
 const navBar = () => {
   return (
     <nav className={styles.navContainer}>
+      <div className={styles.contactWrapper}>
+        <Link to="/">ORANGE BLOSSOM</Link>
+      </div>
       <div className={styles.linksWrapper}>
         <ul>
           <li>
@@ -32,23 +33,8 @@ const navBar = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.contactWrapper}>
-        <div>(352) 531-1139</div>
-        <div>
-          <FontAwesomeIcon
-            icon={faFacebook}
-            size="2x"
-            className={styles.icon}
-          />
-          <FontAwesomeIcon
-            icon={faInstagram}
-            size="2x"
-            className={styles.icon}
-          />
-        </div>
-      </div>
-      <div className={styles.mobileIcon}>
-        <FontAwesomeIcon icon={faBars} size="3x" />
+      <div className={styles.mobileIconWrapper}>
+        <MdMenu className={styles.mobileIcon} />
       </div>
     </nav>
   );

@@ -77,7 +77,7 @@ const IndexPage = (props) => {
   if (errors) {
     return (
       <Layout>
-        <GraphQLErrorList errors={errors} />G
+        <GraphQLErrorList errors={errors} />
       </Layout>
     );
   }

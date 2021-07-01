@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.container h2 {
+  font-family: chaparral-pro-caption, serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: var(--font-fluid-heading);
+  line-height: var(--font-fluid-heading);
+  margin: 20px 0;
+  text-align: center;
+}
+
+.container h3 {
+  font-family: great-vibes, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--font-fluid-subheading);
+  line-height: var(--font-fluid-subheading);
+  margin: 20px 0;
+  text-align: center;
+}
+
+.container p {
+  max-width: 500px;
+  margin: 0;
+  text-align: center;
+}

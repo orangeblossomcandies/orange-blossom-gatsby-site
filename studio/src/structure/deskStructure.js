@@ -1,6 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdSettings } from "react-icons/md";
-import { MdHome } from "react-icons/md";
+import { FcHome, FcEditImage, FcSettings } from "react-icons/fc";
 import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
@@ -36,7 +35,7 @@ export default () =>
     .items([
       S.listItem()
         .title("Settings")
-        .icon(MdSettings)
+        .icon(FcSettings)
         .child(
           S.editor()
             .id("siteSettings")
@@ -45,17 +44,24 @@ export default () =>
         ),
       S.listItem()
         .title("Homepage")
-        .icon(MdHome)
+        .icon(FcHome)
         .child(
           S.editor()
             .id("home")
             .schemaType("home")
             .documentId("singletonHomepage")
         ),
+      S.listItem()
+        .title("Menu")
+        .icon(FcEditImage)
+        .child(
+          S.editor().id("menu").schemaType("menu").documentId("singletonMenu")
+        ),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
-        (listItem) => !["siteSettings", "home"].includes(listItem.getId())
+        (listItem) =>
+          !["siteSettings", "home", "menu"].includes(listItem.getId())
       ),
     ]);

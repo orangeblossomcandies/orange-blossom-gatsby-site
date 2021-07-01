@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+a {
+  color: var(--color-font-dark);
+}
+
 h1 {
   font-family: chaparral-pro-caption, serif;
   font-weight: 700;
@@ -30,6 +34,8 @@ h2 {
   font-size: var(--font-title1-size);
   line-height: var(--font-title2-line-height);
 }
+
+
 
 @media screen and (min-width: 320px) {
   h1 {

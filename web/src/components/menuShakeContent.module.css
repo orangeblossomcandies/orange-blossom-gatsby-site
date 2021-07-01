@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.container h2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: chaparral-pro-caption, serif;
+  font-size: calc(20px + 25 * ((100vw - 320px) / 1180));
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.price {
+  color: var(--color-orange);
+  font-family: raleway, sans-serif;
+  font-size: calc(20px + 25 * ((100vw - 320px) / 1180));
+  line-height: var(--font-title1-line-height);
+  margin-left: 5px;
+}
+
+.flavorContainer {
+  margin-top: 40px;
+}
+
+.flavorWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 700px;
+}
+
+.flavorWrapper h3 {
+  font-size: calc(20px + 10 * ((100vw - 320px) / 1180));
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.flavorWrapper p {
+  margin: 5px 0 20px 0;
+}
+
+@media (max-width: 800px) {
+  .flavorContainer {
+    margin-top: 20px;
+  }
+}
