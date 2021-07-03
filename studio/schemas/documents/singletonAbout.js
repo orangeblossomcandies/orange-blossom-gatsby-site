@@ -9,9 +9,14 @@ export default {
       type: "string",
     },
     {
-      title: "Bio",
-      name: "bio",
-      type: "bodyPortableText",
+      title: "Biographies",
+      name: "bios",
+      type: "array",
+      of: [
+        {
+          type: "aboutBio",
+        },
+      ],
     },
   ],
 };

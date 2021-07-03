@@ -1,5 +1,11 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { FcHome, FcEditImage, FcSettings, FcAbout } from "react-icons/fc";
+import {
+  FcHome,
+  FcEditImage,
+  FcSettings,
+  FcAbout,
+  FcBusinesswoman,
+} from "react-icons/fc";
 import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
@@ -43,6 +49,12 @@ export default () =>
             .documentId("siteSettings")
         ),
       S.listItem()
+        .title("Store Info")
+        .icon(FcAbout)
+        .child(
+          S.editor().id("info").schemaType("info").documentId("singletonInfo")
+        ),
+      S.listItem()
         .title("Homepage")
         .icon(FcHome)
         .child(
@@ -52,8 +64,8 @@ export default () =>
             .documentId("singletonHomepage")
         ),
       S.listItem()
-        .title("About")
-        .icon(FcAbout)
+        .title("About Page")
+        .icon(FcBusinesswoman)
         .child(
           S.editor()
             .id("about")
@@ -61,7 +73,7 @@ export default () =>
             .documentId("singletonAbout")
         ),
       S.listItem()
-        .title("Menu")
+        .title("Menu Page")
         .icon(FcEditImage)
         .child(
           S.editor().id("menu").schemaType("menu").documentId("singletonMenu")
@@ -71,6 +83,8 @@ export default () =>
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["siteSettings", "home", "menu", "about"].includes(listItem.getId())
+          !["siteSettings", "home", "menu", "about", "info"].includes(
+            listItem.getId()
+          )
       ),
     ]);

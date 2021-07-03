@@ -20,6 +20,20 @@
   padding: 10px;
 }
 
+.container p {              /* Presents text data from address correctly with newlines */
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.container a {
+  color: var(--color-font-light);
+  text-decoration: none;
+}
+
+.container a:hover {
+  color: #fff;
+}
+
 .logoContainer {
   display: flex;
   justify-content: center;

@@ -15,6 +15,14 @@
   text-transform: uppercase;
 }
 
+.hours {
+  display: flex;
+}
+
+.hours div {
+  margin-left: 20px;
+}
+
 .address {
   margin-left: 100px;
 }

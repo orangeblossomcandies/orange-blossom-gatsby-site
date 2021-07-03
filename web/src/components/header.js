@@ -1,18 +1,31 @@
 import React from "react";
 import * as styles from "./header.module.css";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      info: sanityInfo {
+        address
+        hours
+      }
+      menu: sanityMenu {
+        flavorOfTheMonth
+      }
+    }
+  `);
+  const info = (data || {}).info;
+  const menu = (data || {}).menu;
   return (
     <div className={styles.topBarWrapper}>
-      <div className={styles.address}>
-        16937 Lakeside Dr. Montverde, FL 34756
-      </div>
+      <div className={styles.address}>{info.address}</div>
       <div className={styles.hours}>
-        Hours of operation: Monday-wednesday 12-8pm | Thursday 12-6pm |
-        Friday-saturday closed | Sunday 12-6pm
+        {info.hours.map((hours, index) => (
+          <div key={index}>{hours}</div>
+        ))}
       </div>
       <div className={styles.flavorOfWeek}>
-        Flavor of the month: Birthday Cake
+        Flavor of the month: {menu.flavorOfTheMonth}
       </div>
     </div>
   );

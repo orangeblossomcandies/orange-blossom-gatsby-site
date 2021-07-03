@@ -51,5 +51,15 @@ export default {
       type: "text",
       validation: (Rule) => Rule.required(),
     },
+    {
+      title: "Photo Gallery",
+      name: "gallery",
+      type: "array",
+      of: [
+        {
+          type: "mainImage",
+        },
+      ],
+    },
   ],
 };

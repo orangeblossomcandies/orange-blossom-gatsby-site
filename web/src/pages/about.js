@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../containers/layout";
 import PortableText from "../components/portableText";
+import AboutSection from "../components/aboutSection";
 
 export const query = graphql`
   query AboutPageQuery {
@@ -12,7 +13,20 @@ export const query = graphql`
     }
     about: sanityAbout {
       title
-      _rawBio
+      bios {
+        _key
+        _rawBody
+        excerpt
+        name
+        role
+        image {
+          ...SanityImage
+          alt
+          asset {
+            _id
+          }
+        }
+      }
     }
   }
 `;
@@ -21,10 +35,16 @@ export default function About({ data }) {
   const about = (data || {}).about;
   return (
     <Layout>
-      <div style={{ color: `teal` }}>
-        <h1>{about.title}</h1>
-        {about._rawBio && <PortableText blocks={about._rawBio} />}
-      </div>
+      {about.bios.map((bio) => (
+        <AboutSection
+          key={bio._key}
+          name={bio.name}
+          role={bio.role}
+          excerpt={bio.excerpt}
+          image={bio.image}
+          bio={bio._rawBody && <PortableText blocks={bio._rawBody} />}
+        />
+      ))}
     </Layout>
   );
 }
