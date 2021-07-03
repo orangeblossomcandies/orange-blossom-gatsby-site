@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import * as styles from "./navBar.module.css";
 import { Link } from "gatsby";
-import { MdMenu } from "react-icons/md";
+import { MdMenu, MdClear } from "react-icons/md";
 
-const navBar = () => {
+const NavBar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleToggle = () => {
+    setNavbarOpen((prev) => !prev);
+  };
+  const closeMenu = () => {
+    setNavbarOpen(false);
+  };
   return (
     <nav className={styles.navContainer}>
       <div className={styles.contactWrapper}>
@@ -34,10 +41,54 @@ const navBar = () => {
         </ul>
       </div>
       <div className={styles.mobileIconWrapper}>
-        <MdMenu className={styles.mobileIcon} />
+        <button onClick={handleToggle}>
+          {navbarOpen ? (
+            <MdClear className={styles.mobileIcon} />
+          ) : (
+            <MdMenu className={styles.mobileIcon} />
+          )}
+        </button>
+        <ul className={navbarOpen ? styles.showMenu : styles.menuNav}>
+          <li>
+            <Link
+              className={styles.mobileNavLink}
+              to="/"
+              onClick={() => closeMenu()}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.mobileNavLink}
+              to="/about/"
+              onClick={() => closeMenu()}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.mobileNavLink}
+              to="/menu/"
+              onClick={() => closeMenu()}
+            >
+              Menu
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.mobileNavLink}
+              to="/contact/"
+              onClick={() => closeMenu()}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
 };
 
-export default navBar;
+export default NavBar;
