@@ -22,7 +22,7 @@
   font-style: normal;
   font-size: calc(23px + 25 * ((100vw - 320px) / 1180));
   line-height: var(--font-title1-line-height);
-  margin: 0 0 10px 0;
+  margin: 15px 0 10px 0;
 }
 
 .sizesWrapper {
@@ -70,7 +70,15 @@
 
 @media (max-width: 500px) {
   .container h2 {
-    margin: 0;
+    margin: 0 0 10px 0;
+  }
+
+  .container h3 {
+    margin: 10px 0 0 0;
+  }
+
+  .container img {
+    width: 150px;
   }
 
   .flavorWrapper ul {

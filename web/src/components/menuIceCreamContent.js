@@ -1,5 +1,6 @@
 import React from "react";
 import * as styles from "./menuIceCreamContent.module.css";
+import { StaticImage } from "gatsby-plugin-image";
 
 const menuIceCreamContent = ({
   flavorOfTheMonth,
@@ -9,6 +10,7 @@ const menuIceCreamContent = ({
   return (
     <section className={styles.container}>
       <h2>Ice Cream</h2>
+      <StaticImage src="../assets/line-black.png" width={300} />
       <h3>Flavor of the month: {flavorOfTheMonth}</h3>
       <div className={styles.sizesWrapper}>
         {iceCreamSizes.map((size) => (

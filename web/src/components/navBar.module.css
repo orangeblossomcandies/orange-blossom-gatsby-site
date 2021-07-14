@@ -86,13 +86,13 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--color-black);
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 20px;
   margin-right: -40px;
   top: 0;
   right: 0;
   bottom: 0;
-  height: calc(100vh - 110px);
+  height: 100vh;
   width: 0;
   overflow: hidden;
   z-index: 9;
@@ -114,14 +114,14 @@
   overflow-y: scroll;
   list-style: none;
   position: fixed;
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 20px;
   margin-right: -40px;
   padding-right: 40px;
   top: 0;
   right: 0;
   bottom: 0;
-  height: calc(100vh - 110px);
+  height: 100vh;
   overflow: hidden;
   z-index: 9;
   transition: width 0.5s;
@@ -150,6 +150,6 @@
 
   .navContainer {
     justify-content: flex-end;
-    background: none;
+    height: 100px;
   }
 }

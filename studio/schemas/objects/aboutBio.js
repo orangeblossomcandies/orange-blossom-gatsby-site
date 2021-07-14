@@ -15,12 +15,6 @@ export default {
       description: "Founder, employee, or other role.",
     },
     {
-      name: "excerpt",
-      title: "Excerpt",
-      type: "string",
-      description: "Short excerpt about you",
-    },
-    {
       name: "image",
       title: "Selfie",
       type: "mainImage",

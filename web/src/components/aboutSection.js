@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { getGatsbyImageData } from "gatsby-source-sanity";
 import clientConfig from "../../client-config";
 
-const AboutSection = ({ name, role, excerpt, image, imageAlt, bio }) => {
+const AboutSection = ({ name, role, image, imageAlt, bio }) => {
   const gatsbyImageData = getGatsbyImageData(
     image,
     {
@@ -17,13 +17,16 @@ const AboutSection = ({ name, role, excerpt, image, imageAlt, bio }) => {
     <section className={styles.root}>
       <div className={styles.wrapper}>
         <article className={styles.contentContainer}>
-          <small>{role}</small>
           <h2>{name}</h2>
-          <small>{excerpt}</small>
+          <small>{role}</small>
           <p>{bio}</p>
         </article>
         <article className={styles.imageContainer}>
-          <GatsbyImage image={gatsbyImageData} alt={imageAlt} />
+          <GatsbyImage
+            image={gatsbyImageData}
+            alt={imageAlt}
+            class={styles.bioImg}
+          />
         </article>
       </div>
     </section>

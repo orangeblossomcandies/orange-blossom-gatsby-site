@@ -1,0 +1,116 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 100px 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.root h1 {
+  max-width: 1000px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: calc(40px + 40 * ((100vw - 320px) / 1580));
+  line-height: calc(40px + 30 * ((100vw - 320px) / 1580));
+}
+
+.root p {
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.formContainer {
+  max-width: 600px;
+  width: 100%;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttonWrapper button {
+  background: var(--color-orange);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.label {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.errorMsg {
+  color: rgb(187, 34, 34);
+  margin-left: 5px;
+}
+
+input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgb(211, 211, 211);
+  padding: 5px 10px;
+  font-size: 15px;
+  color: var(--color-black);
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:-webkit-autofill,         /* Stops chrome auto-fill from turning field white */
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 40px #fff inset !important;
+  -webkit-text-fill-color: var(--color-black) !important;
+}
+
+textarea {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgb(211, 211, 211);
+  padding: 5px 10px;
+  font-family: "raleway", sans-serif;
+  font-size: 15px;
+  color: var(--color-black);
+  height: 200px;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  font-family: "raleway", sans-serif;
+}
+
+.msgError {
+  color: rgb(187, 34, 34);
+}
+
+.msgSuccess {
+  color: rgb(13, 141, 67);
+}

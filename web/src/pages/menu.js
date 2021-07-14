@@ -7,7 +7,6 @@ import MenuYellowSection from "../components/menuYellowSection";
 import MenuShakeContent from "../components/menuShakeContent";
 import MenuSundaeContent from "../components/menuSundaeContent";
 import MenuDrinkContent from "../components/menuDrinkContent";
-import MenuSouvenirs from "../components/menuSouvenirs";
 import MenuWineContent from "../components/menuWineContent";
 
 export const query = graphql`
@@ -115,7 +114,6 @@ const Menu = ({ data }) => {
       >
         {menu && <MenuDrinkContent {...menu} />}
       </MenuYellowSection>
-      <MenuSouvenirs />
       <MenuBlueSection
         imageSrc={menu.bottomImage}
         imageAlt={menu.bottomImage.alt}

@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  justify-content: center;
+}
+
+.root h1 {
+  margin-top: 100px;
+  max-width: 1000px;
+  padding: 0 20px;
+  font-size: calc(40px + 60 * ((100vw - 320px) / 1580));
+  line-height: calc(40px + 40 * ((100vw - 320px) / 1580));
+}

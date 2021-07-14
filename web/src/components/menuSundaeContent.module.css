@@ -23,6 +23,7 @@
 .price {
   color: var(--color-orange);
   font-family: raleway, sans-serif;
+  font-weight: 400;
   line-height: var(--font-title1-line-height);
   margin-left: 5px;
 }

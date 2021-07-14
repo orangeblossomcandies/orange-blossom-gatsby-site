@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../containers/layout";
 import PortableText from "../components/portableText";
+import AboutHeader from "../components/aboutHeader";
 import AboutSection from "../components/aboutSection";
 
 export const query = graphql`
@@ -35,6 +36,7 @@ export default function About({ data }) {
   const about = (data || {}).about;
   return (
     <Layout>
+      <AboutHeader />
       {about.bios.map((bio) => (
         <AboutSection
           key={bio._key}
