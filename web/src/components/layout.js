@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
             <span>{info.email}</span>
             <span>TEL: {info.phone}</span>
             <span>
-              <a href="https://facebook.com">
+              <a href="https://facebook.com/orangeblossomcandiesandcream/">
                 <FontAwesomeIcon
                   icon={faFacebookF}
                   color="#db7342"
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
                   size="lg"
                 />
               </a>
-              <a href="https://instagram.com">
+              <a href="https://www.instagram.com/orangeblossomcandiesandcream/">
                 <FontAwesomeIcon
                   icon={faInstagram}
                   className={styles.instaIcon}

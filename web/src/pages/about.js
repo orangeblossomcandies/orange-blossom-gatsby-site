@@ -17,7 +17,6 @@ export const query = graphql`
       bios {
         _key
         _rawBody
-        excerpt
         name
         role
         image {
