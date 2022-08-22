@@ -36,7 +36,6 @@
     "gatsby-plugin-sharp": "^3.4.2",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.4.0",
-    "gatsby-source-google-reviews": "0.0.7",
     "gatsby-source-sanity": "^7.0.2",
     "gatsby-transformer-sharp": "^3.4.0",
     "locomotive-scroll": "^4.1.1",
